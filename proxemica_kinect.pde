@@ -8,6 +8,9 @@
  * date:  12/12/2012 (m/d/y)
  * ----------------------------------------------------------------------------
  */
+ 
+ // a biblioteca SimpleOpenNI está disponível apenas para o processing 2
+ // o Kinect utilizado para o projeto é o v1
 
 import SimpleOpenNI.*;
 import netP5.*;
@@ -94,7 +97,7 @@ void draw()
   background(0, 0, 0);
 
   
-  //desenha defaul
+  //desenha default
 
   flying -= 0.05;
 
