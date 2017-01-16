@@ -38,7 +38,7 @@ void draw()
       osc.send(msg, supercollider);
     }
 
-    if (mouseX < width/5 && mouseX > width/3) {
+    if (mouseX > width/5 && mouseX < width/3) {
       OscMessage msg = new OscMessage("/starhit4");
       osc.send(msg, supercollider);
     }
