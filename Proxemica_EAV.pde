@@ -2,7 +2,6 @@
 import netP5.*;
 import oscP5.*;
 
-
 OscP5 osc;
 NetAddress supercollider;
 
@@ -67,22 +66,16 @@ void draw()
       yoff += 0.2;
     }
 
-
-
     background(0);
     stroke(map(mouseX, 0, width, 0, 255), map(mouseX, 0, width, 50, 0), map(mouseX, 0, width , 255, 0));
     noFill();
 
-    //translate(width/2, height/2+50);
-    //rotateX(PI/3);
-    //translate(-w/2, -h/2);
     for (int y = 0; y < rows-1; y++) {
       beginShape(TRIANGLE_STRIP);
       for (int x = 0; x < cols; x++) {
       
         vertex(x*scl, y*scl, terrain[x][y]);
         vertex(x*scl, (y)*scl, terrain[x][y+1]);
-        //rect(x*scl, y*scl, scl, scl);
        
       }
       endShape();
