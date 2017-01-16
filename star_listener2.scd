@@ -1,6 +1,3 @@
-
-
-
 (
 SynthDef(\bpfsaw, {
 	arg atk=2, sus=0, rel=1.5, c1=1, c2=(-1),
@@ -32,7 +29,6 @@ OSCdef('starlistener', {
 		\bpfsaw,
 		[   \rel, 0.5,
 			\freq, (Scale.minor.degrees+60).midicps.choose,
-			// \amp, 0.25,
 			\cf, msg[1],
 			\rq, 0.3,
 			\amp, msg[2],
@@ -81,28 +77,3 @@ OSCdef('starlistener4', {
   Synth("blips",[\rel,3, \freq,200, \amp, 0.1])
 }, "/starhit4");
 )
-
-// (
-// OSCdef('starlistener2', {
-// 	arg msg;
-// 	~marimba = Pbind(
-// 		\instrument, \bpfsaw,
-// 		\dur, Prand([1, 0.5]),
-// 		\freq, Prand([1/2, 2/3, 1, 4/3, 2, 5/2, 3, 4, 6, 8]),
-// 		\detune, 0,
-// 		\rqmin, 0.005,
-// 		\rqmax, 0.008,
-// 		\cfmin, Prand((Scale.major.degrees+64).midicps, inf) * Prand([0.5,1,2,4]),
-// 		\cfmax, Pkey(\cfmin),
-// 		\atk, 3,
-// 		\sus, 1,
-// 		\rel, 5,
-// 		\amp, 0.6,
-// 		\out, 0,
-// 	).play
-//
-// }, "/starhit2");
-// )
-
-
-
